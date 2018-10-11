@@ -15,7 +15,7 @@ class Solution:
                     in_degree[next] += 1
                     neighbors[pre].append(next)
                     break
-        
+                    
         # Topological Sort
         heap = [ch for ch in in_degree if in_degree[ch] == 0]
         heapify(heap)
