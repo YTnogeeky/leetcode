@@ -10,6 +10,4 @@ class Solution(object):
         max_count = max(counts)
         max_items = counts.count(max_count)
     
-        
-       
         return max(len(tasks), (max_count - 1) * (n + 1) + max_items)
