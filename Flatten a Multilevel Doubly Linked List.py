@@ -6,21 +6,20 @@ class Solution(object):
         dummy = Node(0,None,head,None)     
         stack = []
         stack.append(head)
-        prev = dummy
+        p = dummy
         
         while stack:
             root = stack.pop()
 
-            root.prev = prev
-            prev.next = root
+            root.prev = p
+            p.next = root
             
             if root.next:
-                stack.append(root.next)
-                root.next = None
+                stack.append(root.next)      
             if root.child:
                 stack.append(root.child)
                 root.child = None
-            prev = root        
+            p = root        
             
         
         dummy.next.prev = None
